@@ -47,6 +47,7 @@ public class DesktopsPageStepDefinition extends Base {
 	@Then("^User should see a message ‘Success: you have added HP LP (\\d+) to your Shopping cart!’$")
 	public void user_should_see_a_message_Success_you_have_added_HP_LP_to_your_Shopping_cart(int arg1) throws Throwable {
 
+		//This is central Repository changes
 	}
 
 }
