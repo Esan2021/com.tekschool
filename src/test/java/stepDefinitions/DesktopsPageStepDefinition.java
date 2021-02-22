@@ -58,6 +58,7 @@ public class DesktopsPageStepDefinition extends Base {
 		WebDriverUtility.screenShot();
 		logger.info("User should see a message ‘Success: you have added HP LP (\\\\d+) to your Shopping cart!’");
 
+		//This is central Repository changes
 	}
 	
 	@When("^User click ADD TO CART option on ‘Canon EOS (\\d+)D’ item$")
