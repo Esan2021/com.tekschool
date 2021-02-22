@@ -39,11 +39,6 @@ public class WebDriverUtility extends Base {
 
 	}
 
-	public static void selectByIndex(WebElement element, int index) {
-		Select select = new Select(element);
-		select.selectByIndex(index);
-
-	}
 
 	public static void acceptAlert() {
 		driver.switchTo().alert().accept();

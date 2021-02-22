@@ -7,91 +7,139 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 12484858300,
+  "duration": 3656843100,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 4,
-  "name": "User add HP LP 3065 from Desktops tab to the cart",
+  "line": 23,
+  "name": "User add Canon EOS 5D from Desktops tab to the cart",
   "description": "",
-  "id": "retail-website-features;user-add-hp-lp-3065-from-desktops-tab-to-the-cart",
+  "id": "retail-website-features;user-add-canon-eos-5d-from-desktops-tab-to-the-cart",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 3,
-      "name": "@TestNG"
+      "line": 22,
+      "name": "@TestAddCanon"
     }
   ]
 });
 formatter.step({
-  "line": 6,
+  "line": 24,
   "name": "User is on Retail website",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 7,
+  "line": 25,
   "name": "User click on Desktops tab",
   "keyword": "When "
 });
 formatter.step({
-  "line": 8,
+  "line": 26,
   "name": "User click on Show all desktops",
   "keyword": "And "
 });
 formatter.step({
-  "line": 9,
-  "name": "User click ADD TO CART option on ‘HP LP3065’ item",
+  "line": 27,
+  "name": "User click ADD TO CART option on ‘Canon EOS 5D’ item",
   "keyword": "And "
 });
 formatter.step({
-  "line": 10,
+  "line": 28,
+  "name": "User select color from dropdown ‘Red’",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 29,
   "name": "User select quantity 1",
   "keyword": "And "
 });
 formatter.step({
-  "line": 11,
+  "line": 30,
   "name": "User click add to Cart button",
   "keyword": "And "
 });
 formatter.step({
-  "line": 12,
-  "name": "User should see a message ‘Success: you have added HP LP 3065 to your Shopping cart!’",
+  "line": 31,
+  "name": "User should see a message ‘Success: You have added Canon EOS 5D to your shopping cart!’",
   "keyword": "Then "
 });
 formatter.match({
   "location": "LoginTestStepDefinition.user_is_on_Retail_website()"
 });
 formatter.result({
-  "duration": 4473269700,
+  "duration": 4963164000,
   "status": "passed"
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "DesktopsPageStepDefinition.user_click_on_Desktops_tab()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 140552900,
+  "status": "passed"
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "DesktopsPageStepDefinition.user_click_on_Show_all_desktops()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 3591702600,
+  "status": "passed"
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "arguments": [
+    {
+      "val": "5",
+      "offset": 44
+    }
+  ],
+  "location": "DesktopsPageStepDefinition.user_click_ADD_TO_CART_option_on_Canon_EOS_D_item(int)"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 1818710600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "DesktopsPageStepDefinition.user_select_color_from_dropdown_Red()"
+});
+formatter.result({
+  "duration": 633356700,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 21
+    }
+  ],
+  "location": "DesktopsPageStepDefinition.user_select_quantity(int)"
+});
+formatter.result({
+  "duration": 468784400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "DesktopsPageStepDefinition.user_click_add_to_Cart_button()"
+});
+formatter.result({
+  "duration": 79686300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "5",
+      "offset": 61
+    }
+  ],
+  "location": "DesktopsPageStepDefinition.user_should_see_a_message_Success_You_have_added_Canon_EOS_D_to_your_shopping_cart(int)"
+});
+formatter.result({
+  "duration": 458430400,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 1401345900,
+  "duration": 4777911800,
   "status": "passed"
 });
 });
