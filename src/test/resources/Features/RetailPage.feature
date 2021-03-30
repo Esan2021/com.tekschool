@@ -1,66 +1,40 @@
-@retailPage
-Feature: Retail Website Features 
+@AllClass
+Feature: Retail Page Features
 
-#Every feature file starts with Feature: <Name of feature file>
-#Every Scenario starts with Scenario: <Name of Test case we want to automate>
-#Gherkin keywords are Given When Then 
-#Given is precondition 
-#When is an Action taken 
-#Then is an expected result ( we write validation )
-#And is repeating an action or can be used following Given keyword as well
-#But is used for negative scenarios verification 
+Background:
+Given User is on Retail website
+And User click on MyAccount
+When User click on Login
+And User enter username ‘userName’ and password 'password’
+And User click on Login button
+Then User should be logged in to MyAccount dashboard
 
 
-Background: 
-	Given User is on Retail website 
-	
-	
-	
-@Test 
-Scenario: Search functionality Test case 
-	When User search for 'iphone' 
-	And User click on search button 
-	Then User should see Iphone image 
-	
-	
-	#In scenario Outline we can run same scenario with multiple set of data 
-	# we will use Examples keyword to pass different data 
-	#Every Scenario outline follows with Examples keyword
-	#Under Examples Keyword we placed Data inside the pipes |  and we can separate Columns 
-	#with Pipes 
-	#In Examples each row represent one time of execution
-	
-Scenario Outline: Test Search Functionality with multiple set of Data 
-	When User search for '<itemName>' 
-	And User click on search button 
-	
-	
-	Examples: 
-		|itemName|
-		|iphone|
-		|mac book|
-		|Canon|
-		
-		
-@RegisterTest
-Scenario: Register an Account test case
-		When User click  on MyAccount
-		And User click on Register option
-		And User fill the Registration form with Below information
-		|firstName|lastName|email|telephone|password|confirmPassword|subscribe|
-		|Alex|Sokolova|alex@gmail.com|1012026633|test|test|no|
-		And User accept the privacy and policy 
-		And User click on Continue button
-		Then User should be registered in Retail Website
-		
-		
-		
+Scenario: Register as an Affiliate user with Cheque Payment Method
+When User click on ‘Register for an Affiliate Account’ link
+And User fill affiliate form with below information
+|company|website|taxID|paymentMethod|ChequePayeeName|
+|Tek|WWW.Tek.com|10000|Cheque|payment|
+And User check on About us check box
+And User click on Continue button 
+Then User should see a success message
 
-		
-		
-		
-		
-		
-		
-		
-		
+
+Scenario: Edit your affiliate information from Cheque payment method to Bank Transfer
+When User click on ‘Edit your affiliate informationlink
+And user click on Bank Transfer radio button
+And User fill Bank information with below information
+|bankName|abaNumber|swiftCode|accountName|accountNumber|
+|BankOfOne|25000|1000|Ehsan|123654789|
+And User click on Continue button
+Then User should see a success message
+
+
+Scenario: Edit your account Information
+When User click on ‘Edit your account information’ link
+And User modify below information
+|firstname|lastName|email|telephone|
+|Ehsan|Asadpoor|Email |789456|
+And User click on continue button
+Then User should see a message ‘Success: Your account has been successfully updated.’
+
